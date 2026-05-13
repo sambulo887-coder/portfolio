@@ -1,152 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sambulo Ndebele | Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sambulo Ndebele | Portfolio</title>
+    <meta
+      name="description"
+      content="Sambulo Ndebele - Software Development student portfolio. Projects, skills, and contact."
+    />
+    <link rel="preload" as="image" href="./assets/profile.jpg" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="#home" aria-label="Go to top">
+          <span class="brand-badge" aria-hidden="true"></span>
+          <span class="brand-name">
+            Sambulo
+            <small>Student Developer</small>
+          </span>
+        </a>
 
-    body {
-      background: #0f172a;
-      color: white;
-      line-height: 1.6;
-    }
+        <nav class="nav" id="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#services">What I Do</a>
+          <a href="#resume">Resume</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(135deg, #1e3a8a, #0f172a);
-      padding: 20px;
-    }
+        <div class="nav-cta">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+        </div>
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: #cbd5e1;
-    }
-
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #38bdf8;
-      border: none;
-      border-radius: 8px;
-      color: black;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
-      color: #38bdf8;
-    }
-
-    .about {
-      text-align: center;
-      color: #cbd5e1;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      color: #38bdf8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      color: #94a3b8;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- HERO SECTION -->
-  <header>
-    <h1>Hi, I'm Sambulo Ndebele</h1>
-    <p>Aspiring Software Developer</p>
-    <a class="btn" href="#projects">View My Work</a>
-  </header>
-
-  <!-- ABOUT -->
-  <section>
-    <h2>About Me</h2>
-    <p class="about">
-      I am an aspiring software developer passionate about building real-world projects.
-      I enjoy solving problems and creating useful applications that people can interact with.
-    </p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>My Projects</h2>
-
-    <div class="projects">
-
-      <div class="card">
-        <h3>Popup Message App</h3>
-        <p>A simple interactive popup notification system built with JavaScript.</p>
+        <button
+          class="btn menu-btn"
+          id="menuBtn"
+          aria-expanded="false"
+          aria-controls="nav"
+          aria-label="Open menu"
+        >
+          Menu
+        </button>
       </div>
+    </header>
 
-      <div class="card">
-        <h3>Weather App</h3>
-        <p>A web app that shows real-time weather updates using API data.</p>
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-card">
+            <div class="hero-kicker">Welcome to my portfolio</div>
+            <h1 class="hero-title">
+              Hi, I’m <span class="hl">Sambulo Ndebele</span>
+            </h1>
+            <p class="hero-subtitle">
+              Software Development student building real-world projects with
+              <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>,
+              and <strong>JavaScript</strong>.
+            </p>
+
+            <div class="hero-meta" aria-label="Highlights">
+              <span class="pill"><span class="dot" aria-hidden="true"></span> Student Developer</span>
+              <span class="pill">Learning by building</span>
+              <span class="pill">Open to internships</span>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Contact Me</a>
+              <a class="btn" href="#resume">My Resume</a>
+            </div>
+
+            <div class="social" aria-label="Social links">
+              <a
+                class="icon-btn"
+                href="https://github.com/sambulo887-coder"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 2C6.48 2 2 6.58 2 12.22c0 4.5 2.87 8.3 6.84 9.65.5.1.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.17-1.1-1.48-1.1-1.48-.9-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.03 1.03-2.74-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05A9.2 9.2 0 0 1 12 6.9c.85 0 1.71.12 2.5.36 1.9-1.32 2.74-1.05 2.74-1.05.55 1.4.2 2.44.1 2.7.64.71 1.03 1.62 1.03 2.74 0 3.95-2.34 4.82-4.57 5.08.36.32.69.95.69 1.92 0 1.38-.01 2.5-.01 2.84 0 .26.18.59.69.48A10.06 10.06 0 0 0 22 12.22C22 6.58 17.52 2 12 2Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-photo">
+            <div class="float-tag">
+              <strong>Projects from GitHub</strong>
+              <span>Auto-loaded in this page</span>
+            </div>
+            <div class="photo-frame">
+              <img src="./assets/profile.jpg" alt="Portrait photo of Sambulo Ndebele" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            I’m a Software Development student who loves building practical apps and improving my skills every day. I
+            enjoy problem-solving, learning new tools, and turning ideas into working projects.
+          </p>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="container">
+          <h2 class="section-title">What I Do</h2>
+          <p class="section-subtitle">My current focus areas as a student developer.</p>
+
+          <div class="grid-3">
+            <div class="card">
+              <div class="card-title"><span class="mini-icon" aria-hidden="true">🧩</span> Python Apps</div>
+              <p class="card-desc">Small tools and desktop apps using Python (including Tkinter projects).</p>
+            </div>
+            <div class="card">
+              <div class="card-title"><span class="mini-icon" aria-hidden="true">🌐</span> Web Development</div>
+              <p class="card-desc">Responsive websites with HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="card">
+              <div class="card-title"><span class="mini-icon" aria-hidden="true">🧠</span> Problem Solving</div>
+              <p class="card-desc">Practice projects that improve logic, structure, and clean code habits.</p>
+            </div>
+            <div class="card">
+              <div class="card-title"><span class="mini-icon" aria-hidden="true">🧪</span> Learning by Building</div>
+              <p class="card-desc">I learn faster by shipping small projects and iterating.</p>
+            </div>
+            <div class="card">
+              <div class="card-title"><span class="mini-icon" aria-hidden="true">🧰</span> Git & GitHub</div>
+              <p class="card-desc">Version control and publishing my work on GitHub.</p>
+            </div>
+            <div class="card">
+              <div class="card-title"><span class="mini-icon" aria-hidden="true">✨</span> UI Polish</div>
+              <p class="card-desc">Modern, clean layouts with good spacing, typography, and color.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume">
+        <div class="container">
+          <h2 class="section-title">My Resume</h2>
+          <p class="section-subtitle">A quick summary of who I am, what I’m learning, and where I’m going.</p>
+
+          <div class="resume">
+            <div class="tabs" role="tablist" aria-label="Resume tabs" data-tabs>
+              <button class="tab-btn" role="tab" aria-selected="true" aria-controls="panel-bio" id="tab-bio">
+                Biography
+              </button>
+              <button
+                class="tab-btn"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-skills"
+                id="tab-skills"
+                tabindex="-1"
+              >
+                Skills
+              </button>
+              <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-edu" id="tab-edu" tabindex="-1">
+                Education
+              </button>
+            </div>
+
+            <div class="tab-panels">
+              <div class="panel" role="tabpanel" id="panel-bio" aria-hidden="false" aria-labelledby="tab-bio">
+                <div class="split">
+                  <div class="item">
+                    <h4>Current Goal</h4>
+                    <p>Build strong fundamentals and ship more projects while studying software development.</p>
+                    <small>2026</small>
+                  </div>
+                  <div class="item">
+                    <h4>What I Enjoy</h4>
+                    <p>Creating interactive apps, learning web UI, and improving my problem-solving skills.</p>
+                    <small>Always learning</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel" role="tabpanel" id="panel-skills" aria-hidden="true" aria-labelledby="tab-skills">
+                <div class="item">
+                  <h4>Skills</h4>
+                  <p>These are the tools I use most often right now.</p>
+                  <div class="skills" aria-label="Skill list">
+                    <span class="chip">Python</span>
+                    <span class="chip">Tkinter</span>
+                    <span class="chip">HTML</span>
+                    <span class="chip">CSS</span>
+                    <span class="chip">JavaScript</span>
+                    <span class="chip">Git</span>
+                    <span class="chip">GitHub</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="panel" role="tabpanel" id="panel-edu" aria-hidden="true" aria-labelledby="tab-edu">
+                <div class="list">
+                  <div class="item">
+                    <h4>Software Development (Student)</h4>
+                    <p>Currently studying and building projects to grow as a developer.</p>
+                    <small>2025 – Present</small>
+                  </div>
+                  <div class="item">
+                    <h4>Personal Projects</h4>
+                    <p>Hands-on learning through GitHub projects and practice websites.</p>
+                    <small>Ongoing</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">
+            These projects are pulled from my GitHub profile (<a
+              class="muted-link"
+              href="https://github.com/sambulo887-coder"
+              target="_blank"
+              rel="noreferrer"
+              >sambulo887-coder</a
+            >).
+          </p>
+
+          <div class="projects-grid" id="projectsGrid" aria-live="polite">
+            <div class="card">Loading projects…</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-subtitle">Want to work together or give feedback? Reach out.</p>
+
+          <div class="contact-card">
+            <div class="card">
+              <h3 class="card-title"><span class="mini-icon" aria-hidden="true">✉️</span> Email</h3>
+              <p class="card-desc">Add your email here.</p>
+              <div class="hero-actions" style="margin-top: 14px">
+                <a class="btn" href="mailto:your-email@example.com">Send Email</a>
+              </div>
+            </div>
+            <div class="card">
+              <h3 class="card-title"><span class="mini-icon" aria-hidden="true">💼</span> GitHub</h3>
+              <p class="card-desc">See more projects and updates on my GitHub.</p>
+              <div class="hero-actions" style="margin-top: 14px">
+                <a
+                  class="btn btn-primary"
+                  href="https://github.com/sambulo887-coder"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Open GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Sambulo Ndebele. All rights reserved.</div>
+        <a class="muted-link" href="#home">Back to top</a>
       </div>
+    </footer>
 
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>This portfolio itself—built using HTML, CSS, and a bit of creativity.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Sambulo Ndebele. All rights reserved.</p>
-  </footer>
-
-</body>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="./data/projects.js"></script>
+    <script src="./js/main.js" defer></script>
+  </body>
 </html>
